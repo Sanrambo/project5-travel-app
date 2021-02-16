@@ -38,8 +38,6 @@ const handleSubmit = async (e) => {
     outputData.info = weather.data[weatherDday].weather.description;
 
     console.log(outputData);
-    //updateUI();
-
 
 };
 
