@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('dist'));
 
 app.get("/", function (req, res) {
-    res.sendFile(path.resolve('dist/index.html'));
+    res.sendFile("src/client/views/index.html");
 });
 
 const getGeo = async (city) => {
