@@ -1,0 +1,36 @@
+body{
+    background: url('../img/bg2.png');
+    height:100%;
+    position: fixed;
+    font-family: 'Poppins', serif;
+    color: #005e80;
+}
+
+.container{
+    
+    background-color: white;
+    height:13em;
+    min-width:94.5em;
+    align-items: center;
+    border: 2px solid #005e80;
+    border-radius: 20px;
+    align-content: center;
+}
+
+.content{
+    
+    text-align: center;
+}
+
+.content div{
+
+    padding:.9em;
+}
+.logo{
+
+    max-width: 35em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding:2%;
+}
