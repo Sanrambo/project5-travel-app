@@ -1,5 +1,6 @@
 const projectData = [];
 
+const regeneratorRuntime = require("regenerator-runtime");
 const fetch = require('node-fetch');
 var path = require('path');
 const express = require('express');
@@ -25,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('dist'));
 
 app.get("/", function (req, res) {
-    res.sendFile("src/client/views/index.html");
+    res.sendFile(path.resolve("dist/index.html"));
 });
 
 const getGeo = async (city) => {
@@ -37,7 +38,7 @@ const getGeo = async (city) => {
         return {
 
             lat: data.geonames[0].lat,
-            lng: data.geonames[0].lng
+            lng: data.geonames[0].lng,
 
         };
     } catch (error) {
@@ -45,6 +46,7 @@ const getGeo = async (city) => {
     }
 
 }
+
 
 const getWeather = async (lat, lng) => {
 
@@ -73,25 +75,26 @@ const getImg = async (city) => {
 
 app.post('/traveling', async (req, res) => {
 
+
     try {
         const destination = req.body.destination;
-        const depDate = req.body.fromDate;
-        const returnDate = req.body.returnDate;
-
         const geonamesData = await getGeo(destination);
-        const weatherbitData = await getWeather(geonamesData.lat, geonamesData.lng);
+
+        const lat = geonamesData.lat;
+        const lng = geonamesData.lng;
+        const weatherbitData = await getWeather(lat, lng);
         const pixabayData = await getImg(destination);
 
         const tripData = {
+
             geonamesData,
             weatherbitData,
-            pixabayData,
-            depDate,
-            returnDate
-        }
+            pixabayData
+
+        };
 
         projectData.push(tripData);
-        res.json(tripData);
+        res.json(projectData);
     } catch (err) {
 
         console.log(err);

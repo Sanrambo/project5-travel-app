@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <title>TRAVELER</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="../styles/styling.css"> -->
+    <!-- <link rel="stylesheet" href="./styles/styling.css"> -->
 
 </head>
 
 <body>
     <img alt="Logo" class="logo" id="logo">
-    <div class="container">
-        <div class="content">
+    <div class="container" id="container">
+        <div id="content">
             <div class="city-form">
                 <label for="">Destination:</label>
-                <input type="text" id="cities">
+                <input type="text" id="destination">
             </div>
             <div class="date-depart">
                 <label for="">Depart:</label>
@@ -28,7 +28,11 @@
             <div class="date-submit">
                 <input type="submit" onsubmit="Client.handleSubmit(this)" id="btn" value="Submit">
             </div>
+
         </div>
+    </div>
+    <div id="container-result">
+
     </div>
 
 </body>

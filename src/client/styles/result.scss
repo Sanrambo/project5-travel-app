@@ -1,0 +1,46 @@
+
+#container-result{
+
+    margin-top: 2em;
+    background-color: white;
+    height:21.5em;
+    min-width:94.5em;
+    align-items: center;
+    border: 2px solid #005e80;
+    border-radius: 20px;
+    align-content: center;
+    display: none;
+
+}
+
+.content-result{
+
+    align-items: center;
+    padding:3%;
+    display: flex;
+    justify-content:center;
+
+    
+    
+}
+
+b{
+
+    color: red;
+}
+
+ .img-result img{
+
+     max-width:60%;
+}
+
+.img-result{
+
+    max-width:50%;
+}
+
+.icon{
+
+    position: absolute;
+
+}
