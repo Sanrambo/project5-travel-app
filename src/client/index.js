@@ -7,7 +7,11 @@ import './styles/styling.scss';
 import './styles/result.scss';
 
 
-document.getElementById('btn').addEventListener('click', handleSubmit);
+document.getElementById('btn').addEventListener('click', (e) => {
+
+    e.preventDefault();
+    handleSubmit();
+});
 document.getElementById('logo').src = logo;
 
 

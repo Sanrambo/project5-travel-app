@@ -10,8 +10,6 @@ var cors = require("cors");
 const dotenv = require('dotenv')
 dotenv.config();
 
-console.log(__dirname);
-
 //const App_API = process.env.API_KEY;
 const weatherbit_API = process.env.weatherbit_API;
 const pxbay_API = process.env.pxbay_API;
@@ -23,10 +21,12 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('dist'));
+//app.use(express.static('dist'));
 
 app.get("/", function (req, res) {
-    res.sendFile(path.resolve("dist/index.html"));
+    //res.sendFile(path.resolve("dist/index.html"));
+    res.sendFile(path.resolve("src/client/views/index.html"));
+
 });
 
 const getGeo = async (city) => {
@@ -53,8 +53,7 @@ const getWeather = async (lat, lng) => {
     try {
         const weatherbitUrl = `https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lng}&key=${weatherbit_API}`;
         const response = await fetch(weatherbitUrl)
-        const data = await response.json();
-        return data;
+        return await response.json();
     } catch (error) {
         console.log("Error", error);
     }
