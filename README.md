@@ -32,7 +32,7 @@ For Country Flag API: no need, it depends on Weatherbit API.
 Since Webpack is used, there are two modes to run the application which is **Production** and **Development** mode.
 
 ### How to run these enviroments:
-**Production**: use `npm run build-prod` then run the server by `npm start`.
+**Production**: use `npm run build-prod` then run the server by `npm start`.<br/>
 **Development**: run the server `npm start` then use `npm run build-dev`.
 
 ## Port
