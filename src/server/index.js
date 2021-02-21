@@ -29,9 +29,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(express.static('dist'));
 
 app.get("/", function (req, res) {
-    //res.sendFile(path.resolve("dist/index.html"));
+    res.sendFile(path.resolve("dist/index.html"));
 <<<<<<< HEAD
-    res.sendFile(path.resolve("./client/views/index.html"));
+    //res.sendFile(path.resolve("./client/views/index.html"));
 });
 
 

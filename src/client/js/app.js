@@ -1,20 +1,9 @@
-import "@babel/polyfill";
-<<<<<<< HEAD
-import { isCityValid } from './checkCity.js'
 
 // using async await function 
 const handleSubmit = async () => {
     //e.preventDefault();
 
     // define objects to save the data on them
-=======
-import { isCityValid } from './checkCity';
-
-// using async await function 
-
-const handleSubmit = async () => {
-
->>>>>>> 4959cef52637a47c0022c824c404115c158dda55
     const inputData = {};
     let outputData = {};
     const result = {};
@@ -36,27 +25,16 @@ const handleSubmit = async () => {
     outputData.daysleft = time.daysleft;
 
 
-<<<<<<< HEAD
     // Make cure if user inserted a valid input & if one of the feilds is empty
-=======
-
->>>>>>> 4959cef52637a47c0022c824c404115c158dda55
-    if (isCityValid(inputData.destination)) {
+    if (Client.isCityValid(inputData.destination)) {
         if (time.dept >= time.current && time.return >= time.current && time.return >= time.dept) {
 
             //store all the result in one object
             result.trip = await postData('http://localhost:7777/traveling', {
 
                 destination: inputData.destination
-<<<<<<< HEAD
             })
 
-            console.log(result);
-=======
-            });
-
-
->>>>>>> 4959cef52637a47c0022c824c404115c158dda55
             //store the needed data for the output in "outputData" object 
             const countryIcon = result.trip[0].weatherbitData.country_code;
 
@@ -72,8 +50,6 @@ const handleSubmit = async () => {
 
             //Country Flag api
             outputData.icon = `https://www.countryflags.io/${countryIcon}/shiny/32.png`;
-
-            console.log(outputData);
 
             //Updating the UI with the retrieved data
             updateUI(outputData);

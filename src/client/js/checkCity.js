@@ -1,5 +1,3 @@
-import "@babel/polyfill";
-
 
 function isCityValid(city) {
     const RegexCity = "^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$";
