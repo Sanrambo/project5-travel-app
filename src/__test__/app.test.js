@@ -15,24 +15,20 @@ describe("Testing the handleSubmit() is defined ", () => {
     });
 });
 
+describe("Checking input validation ", () => {
+    test("Is the input valid?", async () => {
 
 
+        const Input = {};
 
-// describe("Checking input validation ", () => {
-//     test("Is the input valid?", async () => {
-
-//         window.alert = jest.fn();
-
-//         const Input = {};
-
-//         Input.destination = "";
-//         Input.depart = "";
-//         Input.return = "";
+        Input.destination = "london";
+        Input.depart = "";
+        Input.return = "";
 
 
-//         expect(isInputValid(Input))
-//             .toBe(false);
-//     });
-// });
+        expect(isInputValid(Input))
+            .toBe(false);
+    });
+});
 
 

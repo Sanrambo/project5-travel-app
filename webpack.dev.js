@@ -43,10 +43,6 @@ module.exports = {
             protectWebpackAssets: false
         }),
     ],
-    output: {
-        libraryTarget: 'var',
-        library: 'Client'
-    },
     optimization: {
         minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
     },

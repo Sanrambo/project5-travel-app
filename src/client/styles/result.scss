@@ -1,10 +1,10 @@
 
 #container-result{
 
-    margin-top: 2em;
+    margin-top: 2%;
     background-color: white;
-    height:21.5em;
-    min-width:94.5em;
+    height:45%;
+    min-width:90%;
     align-items: center;
     border: 2px solid #005e80;
     border-radius: 20px;
@@ -16,12 +16,10 @@
 .content-result{
 
     align-items: center;
-    padding:3%;
+    padding:2%;
     display: flex;
-    justify-content:center;
+    justify-content:space-evenly;
 
-    
-    
 }
 
 b{
@@ -29,14 +27,9 @@ b{
     color: red;
 }
 
- .img-result img{
-
-     max-width:60%;
-}
-
 .img-result{
 
-    max-width:50%;
+    max-width:30%;
 }
 
 .icon{

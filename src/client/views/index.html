@@ -26,7 +26,7 @@
                 <input type="date" id="return" name="return">
             </div>
             <div class="date-submit">
-                <input type="submit" onsubmit="Client.handleSubmit(this)" id="btn" value="Submit">
+                <input type="submit" id="btn" value="Submit">
             </div>
 
         </div>
@@ -34,7 +34,15 @@
     <div id="container-result">
 
     </div>
-
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
 </body>
 
 </html>

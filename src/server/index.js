@@ -10,7 +10,7 @@ var cors = require("cors");
 const dotenv = require('dotenv')
 dotenv.config();
 
-console.log(__dirname);
+
 
 //const App_API = process.env.API_KEY;
 const weatherbit_API = process.env.weatherbit_API;
@@ -26,8 +26,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('dist'));
 
 app.get("/", function (req, res) {
-    res.sendFile(path.resolve("dist/index.html"));
+    //res.sendFile(path.resolve("dist/index.html"));
+    res.sendFile(path.resolve("./client/views/index.html"));
 });
+
+
+app.listen(7777, function () {
+    console.log("Example app listening on port 7777!");
+});
+
 
 const getGeo = async (city) => {
 
@@ -53,8 +60,7 @@ const getWeather = async (lat, lng) => {
     try {
         const weatherbitUrl = `https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lng}&key=${weatherbit_API}`;
         const response = await fetch(weatherbitUrl)
-        const data = await response.json();
-        return data;
+        return await response.json();
     } catch (error) {
         console.log("Error", error);
     }
@@ -100,10 +106,6 @@ app.post('/traveling', async (req, res) => {
         console.log(err);
         res.status(400).send(err);
     }
-});
-
-app.listen(7777, function () {
-    console.log("Example app listening on port 7777!");
 });
 
 module.exports = app;
