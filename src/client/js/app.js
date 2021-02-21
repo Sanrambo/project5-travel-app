@@ -1,4 +1,5 @@
 import "@babel/polyfill";
+<<<<<<< HEAD
 import { isCityValid } from './checkCity.js'
 
 // using async await function 
@@ -6,6 +7,14 @@ const handleSubmit = async () => {
     //e.preventDefault();
 
     // define objects to save the data on them
+=======
+import { isCityValid } from './checkCity';
+
+// using async await function 
+
+const handleSubmit = async () => {
+
+>>>>>>> 4959cef52637a47c0022c824c404115c158dda55
     const inputData = {};
     let outputData = {};
     const result = {};
@@ -15,23 +24,23 @@ const handleSubmit = async () => {
     inputData.depart = document.getElementById("depart").value;
     inputData.return = document.getElementById("return").value;
 
-
-    console.log(inputData);
     // Check if the     data has been entered
     isInputValid(inputData);
 
     // Call the date handler and assign the returned data to outputData object
     const time = dateAssigning(inputData.depart, inputData.return);
 
-    console.log(time);
 
     //saving the result from "time" object to "outputData" 
     outputData.duration = time.duration;
     outputData.daysleft = time.daysleft;
-    console.log(outputData);
 
 
+<<<<<<< HEAD
     // Make cure if user inserted a valid input & if one of the feilds is empty
+=======
+
+>>>>>>> 4959cef52637a47c0022c824c404115c158dda55
     if (isCityValid(inputData.destination)) {
         if (time.dept >= time.current && time.return >= time.current && time.return >= time.dept) {
 
@@ -39,9 +48,15 @@ const handleSubmit = async () => {
             result.trip = await postData('http://localhost:7777/traveling', {
 
                 destination: inputData.destination
+<<<<<<< HEAD
             })
 
             console.log(result);
+=======
+            });
+
+
+>>>>>>> 4959cef52637a47c0022c824c404115c158dda55
             //store the needed data for the output in "outputData" object 
             const countryIcon = result.trip[0].weatherbitData.country_code;
 

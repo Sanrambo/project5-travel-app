@@ -10,8 +10,11 @@ var cors = require("cors");
 const dotenv = require('dotenv')
 dotenv.config();
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4959cef52637a47c0022c824c404115c158dda55
 //const App_API = process.env.API_KEY;
 const weatherbit_API = process.env.weatherbit_API;
 const pxbay_API = process.env.pxbay_API;
@@ -23,16 +26,21 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('dist'));
+//app.use(express.static('dist'));
 
 app.get("/", function (req, res) {
     //res.sendFile(path.resolve("dist/index.html"));
+<<<<<<< HEAD
     res.sendFile(path.resolve("./client/views/index.html"));
 });
 
 
 app.listen(7777, function () {
     console.log("Example app listening on port 7777!");
+=======
+    res.sendFile(path.resolve("src/client/views/index.html"));
+
+>>>>>>> 4959cef52637a47c0022c824c404115c158dda55
 });
 
 
