@@ -1,7 +1,8 @@
+import "@babel/polyfill";
 
 // using async await function 
 const handleSubmit = async () => {
-    //e.preventDefault();
+
 
     // define objects to save the data on them
     const inputData = {};
@@ -136,11 +137,9 @@ const updateUI = (outputResult) => {
 
     //html updating
     container.innerHTML = `
-    <dev class="content-result" id="content-result">
+    <div class="content-result" id="content-result">
 
-       
-            <img src="${outputResult.img}"  alt="${outputResult.city}" class="img-result" id="img-result">
-        
+        <img src="${outputResult.img}"  alt="${outputResult.city}" class="img-result" id="img-result">
         <div class="text-result" id="text-result">
             <h3>Your trip to <b>${outputResult.city} <img src="${outputResult.icon}"  alt="icon" class="icon"> </b>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; will be in <b>${outputResult.daysleft}</b> days.</h3>
