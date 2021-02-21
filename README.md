@@ -21,7 +21,6 @@ Use anyway you like to extract the rapistory to run and test the project. Clonin
 
 
 ## API KEY
-Go to [Meaningcloud](https://www.meaningcloud.com/) and request for your personal api key, then create .env file in the root to add your api key there.
 For Geonames API: go to [GeoNames](https://www.geonames.org/) and request your own API key. The API key is your username
 For Weatherbit API: go to [Weatherbit](https://www.weatherbit.io/) and request your own API key.
 For Pixabay API: go to [Pixabay](https://pixabay.com/api) and request for your own API key.
