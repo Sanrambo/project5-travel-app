@@ -1,4 +1,5 @@
 import "@babel/polyfill";
+import { isCityValid } from './checkCity.js'
 
 // using async await function 
 const handleSubmit = async () => {
@@ -27,7 +28,7 @@ const handleSubmit = async () => {
 
 
     // Make cure if user inserted a valid input & if one of the feilds is empty
-    if (Client.isCityValid(inputData.destination)) {
+    if (isCityValid(inputData.destination)) {
         if (time.dept >= time.current && time.return >= time.current && time.return >= time.dept) {
 
             //store all the result in one object
@@ -35,6 +36,8 @@ const handleSubmit = async () => {
 
                 destination: inputData.destination
             })
+
+            console.log(result.trip);
 
             //store the needed data for the output in "outputData" object 
             const countryIcon = result.trip[0].weatherbitData.country_code;

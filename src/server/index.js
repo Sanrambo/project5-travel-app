@@ -13,9 +13,9 @@ const dotenv = require('dotenv')
 dotenv.config();
 
 //Getting the keys from .env
-const weatherbit_API = process.env.weatherbit_API;
-const pxbay_API = process.env.pxbay_API;
-const geonames_API = process.env.geonames_API;
+const weatherbit_API = '825d3af2c86a4636938b090a5cad334c';
+const pxbay_API = '20133620-dff6c50d880404f36bdeaedd8';
+const geonames_API = 'sanrambo';
 
 //Initialize the server
 const app = express();
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('dist'));
 
 app.get("/", function (req, res) {
-    res.sendFile(path.resolve("dist/index.html"));
+    //res.sendFile(path.resolve("dist/index.html"));
     res.sendFile(path.resolve("./client/views/index.html"));
 });
 
@@ -40,7 +40,7 @@ app.listen(7777, function () {
 const getGeo = async (city) => {
 
     try {
-        const geonamesUrl = `http://api.geonames.org/searchJSON?q=${city}&maxRows=1&username=${geonames_API}`;
+        const geonamesUrl = `http://api.geonames.org/searchJSON?q=${city}&maxRows=10&username=${geonames_API}`;
         const response = await fetch(geonamesUrl);
         const data = await response.json();
         return {
