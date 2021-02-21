@@ -1,4 +1,4 @@
-# Traveling App **"TRAVELLER"**
+# Traveling App **"TRAVELER"**
 
 This repo the fina project "Travel App".
 
