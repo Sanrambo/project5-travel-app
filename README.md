@@ -1,7 +1,6 @@
 # Traveling App **"TRAVELER"**
 
-This repo the fina project "Travel App".
-
+This repo is the final project of FEND-Udacity; Travel App
 ## Overview
 
 In short, in this project user has to pick a destination "city" and deprature date and return date. Based on these infromation the used APIs gonns retrieve the needed data.
