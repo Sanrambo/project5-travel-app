@@ -7,10 +7,10 @@ In short, in this project user has to pick a destination "city" and deprature da
 Like weather condition, tempreture and a picture of that place. Then the app will calculate how many days left fo the trip and the duration of the trip.
 
 ## Used APIs
-Geonames API: for lat and lng.
-WeatherBit API: for high and low tempreture plus the weather description (ie: rainy, cloudy, etc).
-PixaBay API: for the destination image.
-CountryFlag API: for country flag icon.
+Geonames API: for lat and lng.<br/>
+WeatherBit API: for high and low tempreture plus the weather description (ie: rainy, cloudy, etc).<br/>
+PixaBay API: for the destination image.<br/>
+CountryFlag API: for country flag icon.<br/>
 
 ## Getting started
 Use anyway you like to extract the rapistory to run and test the project. Cloning or downloading the zip file.
